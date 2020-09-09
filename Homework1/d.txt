@@ -1,0 +1,20 @@
+Assume we have n inputs (x1, x2, ... xn)
+
+- If bk < -n, then the MP neuron will always be in the quiescent state
+  Proof: x1 + x2 + ... + xn <= n < bk
+      <=> x1 + x2 + ... + xn + (-bk) < 0
+      <=> yk = 0
+ 
+- If bk = -n, then the MP neuron can produce AND logic
+  Proof: x1 + x2 + ... + xn <= n = -bk
+      <=> x1 + x2 + .. + xn + bk <= 0
+      Therefore: x1 + x2 + ... + xn + bk = 0 iff x1 = x2 = ... = xn = 1 and bk = -n
+                 If there exists an xk = 0, then x1 + x2 + ... + xn < n. Therefore, x1 + x2 + ... + xn + bk < 0
+                 
+- If bk = -1, then the MP neuron can produce OR logic
+  Proof: x1 + x2 + ... + xn + bk = x1 + x2 + ... + xn - 1
+      Therefore, if x1 = x2 = ... = xn = 0, then x1 + x2 + ... + xn + bk = 0 + 0 + ... + 0 + - 1 = -1 < 0
+                 if there exists an xk = 1, then x1 + x2 + ... + xn + bk >= 1 - 1 = 0
+                 
+- If bk > -1, then the MP neuron will always be in the firing state
+  Proof: x1 + x2 + ... + xn + bk >= x1 + x2 + ... + xn + 0 >= 0 (since xk >= 0)
