@@ -1,0 +1,42 @@
+a)
+  x1  |  x2  |  bk  |  yk
+  0   |  0   |  1   |  0
+  0   |  1   |  1   |  1
+  1   |  0   |  1   |  1
+  1   |  1   |  1   |  0
+  
+b)
+  No. Because the program in HW1 will output yk = 1 when either of the input is 1 (including x1 = x2 = 1)
+  We can make a small modification to make the program work:
+    //Code to get inputs
+    if (x1 == x2) {
+      yk = 0;
+    }
+    else {
+      yk = 1;
+    }
+    //Code to print output
+  
+c) Assume x1 is exitatory and x2 is inhibitory
+  x1  |  x2  |  bk  |  yk
+  0   |  0   |  0   |  0  (1)
+  0   |  -1  |  0   |  1  (2)
+  1   |  0   |  0   |  1  (3)
+  1   |  -1  |  0   |  0  (4)
+  
+  No. Because the program in HW 1 will output yk = 1 for (1), yk = 0 for (2), and yk = 1 for (4)
+  Again, we can make the some modification to make the program work:
+    //Code to get inputs
+    if (x1 == x2 || x1 == (-x2)) {
+      yk = 0;
+    }
+    else {
+      yk = 1;
+    }
+    //Code to print output
+  
+  d)
+    Yes
+    Assume the network consists of n MP neurons. Let all the input signal be excitatory signals. 
+    In order to satisfy the requirements, we make the 1st MP neuron output 1 when only one of the inputs is 1, and output 0 when both inputs are 0 or 1
+    and all other MP neurons (from 2nd to nth) always output yk = 0.
