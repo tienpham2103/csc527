@@ -4,7 +4,7 @@ a)
   0   |  -1  |  0   |  0
   1   |  0   |  0   |  1
   1   |  -1  |  0   |  1
-  Therefore, yk will be active when x1 = 1 or x2 = 0 (x1 AND !x2)
+  Therefore, yk will be active when x1 = 1 or x2 = 0 (x1 OR !x2)
   
 b)
   x1  |  x2  |  bk  |  yk
@@ -24,4 +24,4 @@ d) bk can be any number
 e) There are 3 possible types of MP neuron:
   - 2 excitatory signals as input --> OR function
   - 2 inhibitory signals as input --> NOR function
-  - 1 excitatory signal and 1 inhibitory signal as input --> AND function (x1 AND !x2)
+  - 1 excitatory signal and 1 inhibitory signal as input --> OR function (x1 OR !x2)
